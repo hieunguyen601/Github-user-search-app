@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  line-height: 1.5;
+  background: #141d2f;
+  color: #e6edf3;
+  display: grid;
+  place-items: start center;
+  padding: 48px 16px;
+}
+
+body > div {
+  width: 100%;
+  max-width: 730px;
+}
+
+body > div > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+h3 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+.background-mode {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #e6edf3;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.background-mode:hover {
+  color: #60abff;
+}
+
+body > div > div:nth-child(2) {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #1f2a48;
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 20px 40px rgba(2, 5, 12, 0.4);
+  margin-bottom: 24px;
+}
+.search-box {
+  flex: 1;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: #e6edf3;
+  padding: 14px 16px;
+  font-size: 16px;
+}
+.search-box::placeholder {
+  color: #97a3b6;
+}
+.search-button {
+  appearance: none;
+  border: 0;
+  background: #0079ff;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search-button:hover {
+  background: #60abff;
+}
+
+.user-information {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  background: #1f2a48;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(2, 5, 12, 0.4);
+  color: #e6edf3;
+}
+
+.profile-details {
+  margin-left: 40px;
+}
+
+.user-information .avatar-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.user-information .profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-information .name-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-information .name {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.user-information .joined-date {
+  color: #97a3b6;
+  font-size: 14px;
+}
+
+.user-information .username-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-information .username {
+  color: #0079ff;
+  font-weight: 500;
+}
+
+.user-information .bio {
+  color: #97a3b6;
+  font-size: 14px;
+}
+
+.user-information .stats {
+  display: flex;
+  flex-direction: column;
+  background: #19233c;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.user-information .stat-labels,
+.user-information .stat-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.user-information .stat-labels p {
+  font-size: 12px;
+  color: #97a3b6;
+}
+
+.user-information .stat-values p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-information .meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.user-information .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e6edf3;
+  font-size: 14px;
+}
+
+.user-information .meta-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-information .meta-item.is-empty {
+  opacity: 0.5;
+}
+
+.user-information .meta-item p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-information .meta-item a {
+  color: inherit;
+  text-decoration: none;
+}
+.user-information .meta-item a:hover {
+  color: #60abff;
+}
+
+.light-background {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 640px) {
+  .user-information {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .user-information .profile-picture {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+  }
+
+  .profile-details {
+    margin: auto;
+  }
+
+  .user-information .name {
+    font-size: 20px;
+  }
+
+  .user-information .stats {
+    padding: 14px 16px;
+  }
+
+  .user-information .meta {
+    grid-template-columns: 1fr;
+  }
+}
